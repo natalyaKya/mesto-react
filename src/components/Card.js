@@ -9,7 +9,7 @@ function Card(props) {
  
     return (
             <div className="elements__card">
-                <div className="elements__image" style={{ backgroundImage: `url(${props.link})` }} alt={props.name} onClick={() => handleClick()}></div>
+                <div onClick={() => handleClick()} className="elements__image" style={{ backgroundImage: `url(${props.link})` }} alt={props.name}></div>
                 <h2 className="elements__text">{props.name}</h2>
                 <button className="elements__delete"></button>
                 <div className="elements__container">

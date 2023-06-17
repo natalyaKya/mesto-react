@@ -1,8 +1,9 @@
 import React from 'react';
 
-function ImagePopup(card, onClose) {
+function ImagePopup({card, onClose}) {
+   
     return (
-        <div className={`popup popup_type_full-size ${card.link ? "popup_opened" : ""}`}>
+        <div className={`popup popup_type_full-size ${card.name ? "popup_opened" : ""}`}>
             <div  className="popup__container">
                 <button className="popup__close-button" type="button" onClick={() => onClose()}></button>
                 <div className="popup__form-full-size" name="popup">

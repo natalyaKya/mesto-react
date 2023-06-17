@@ -1,4 +1,4 @@
 # mesto-react
 
 Рефакторинг кода проекта "Место".
-Ссылка на проект https://github.com/natalyaKya/mesto-react.git
+Ссылка на проект https://natalyakya.github.io/mesto-react
