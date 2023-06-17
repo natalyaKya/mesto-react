@@ -1,12 +1,12 @@
 .header {
-    border-bottom: 1px solid rgba(84, 84, 84, 0.7);
-    margin-bottom: 38px;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+  margin-bottom: 38px;
 }
 
 @media (min-width: 910px) {
-    .header {
-        max-width: 880px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .header {
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

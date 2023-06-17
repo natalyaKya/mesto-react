@@ -1,23 +1,23 @@
 .popup__text {
-    border: none;
-    color: #000000;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    margin-bottom: 5px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 30px;
-    width: 238px;
+  border: none;
+  color: #000000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  width: 238px;
 }
 
 .popup__text:active {
-    outline: none;
-    border: none;
-    outline-offset: 0;
-    box-shadow: none;
+  outline: none;
+  border: none;
+  outline-offset: 0;
+  box-shadow: none;
 }
 
 @media (min-width: 910px) {
-    .popup__text {
-        width: 358px;
-    }
+  .popup__text {
+    width: 358px;
+  }
 }

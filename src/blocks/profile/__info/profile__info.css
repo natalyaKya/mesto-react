@@ -1,15 +1,15 @@
 .profile__info {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    max-width: 280px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  max-width: 280px;
 }
 
 @media (min-width: 910px) {
-    .profile__info {
-        justify-self: flex-start;
-        text-align: start;
-        margin-right: auto;
-        max-width: 570px;
-     }
+  .profile__info {
+    justify-self: flex-start;
+    text-align: start;
+    margin-right: auto;
+    max-width: 570px;
+  }
 }

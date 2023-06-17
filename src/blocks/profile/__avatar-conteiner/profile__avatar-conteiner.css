@@ -1,25 +1,24 @@
-@media (hover:hover) {
-    .profile__avatar-conteiner {
-        position: relative;
-        cursor: pointer;
-
-    }
-    .profile__avatar-conteiner::after {
-        content: "";
-        display: block;
-        width: 26px;
-        height: 26px;
-        z-index: 1;
-        top: 30%;
-        left: 35%;
-        position: absolute;
-        background: url('/src/images/EditButton.svg') no-repeat 100% / cover;
-        opacity: 0;
-        cursor: pointer;
-    }
-    .profile__avatar-conteiner:hover::after {
-        opacity: 1;
-        transition: 0.5s;
-        cursor: pointer;
-    }
+@media (hover: hover) {
+  .profile__avatar-conteiner {
+    position: relative;
+    cursor: pointer;
+  }
+  .profile__avatar-conteiner::after {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 26px;
+    z-index: 1;
+    top: 30%;
+    left: 35%;
+    position: absolute;
+    background: url("/src/images/EditButton.svg") no-repeat 100% / cover;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .profile__avatar-conteiner:hover::after {
+    opacity: 1;
+    transition: 0.5s;
+    cursor: pointer;
+  }
 }

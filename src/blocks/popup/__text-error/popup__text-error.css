@@ -1,17 +1,17 @@
 .popup__text-error {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 238px;
-    min-height: 40px;
-    text-align: left;
-    font-size: 12px;
-    line-height: 15px;
-    color: #FF0000;
-    margin: 0;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 238px;
+  min-height: 40px;
+  text-align: left;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ff0000;
+  margin: 0;
 }
 
 @media (min-width: 910px) {
-    .popup__text-error {
-        width: 358px;
-    }
+  .popup__text-error {
+    width: 358px;
+  }
 }
