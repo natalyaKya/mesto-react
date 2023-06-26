@@ -9,7 +9,7 @@ export const PopupEditProfile = document.querySelector(
 
 function Main(props) {
   const currentUser = React.useContext(CurrentUserContex);
- 
+
   return (
     <main className="content">
       <section className="profile">

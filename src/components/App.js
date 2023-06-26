@@ -43,56 +43,54 @@ function App() {
     setSelectedCard({});
   }
   function handleCardLike(card) {
-    const isLiked = card.likes.some(i => i._id === currentUser._id);
+    const isLiked = card.likes.some((i) => i._id === currentUser._id);
     if (!isLiked) {
-      api.addLike(card._id)
-      .then((newCard) => {
-        setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
-    });
+      api.addLike(card._id).then((newCard) => {
+        setCards((state) =>
+          state.map((c) => (c._id === card._id ? newCard : c))
+        );
+      });
     } else {
-      api.removeLike(card._id)
-      .then((newCard) => {
-        setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
-    });
+      api.removeLike(card._id).then((newCard) => {
+        setCards((state) =>
+          state.map((c) => (c._id === card._id ? newCard : c))
+        );
+      });
     }
   }
   function handleCardDelete(card) {
-      api.deleteCard(card._id)
-      .then(() => {
-        setCards(cards.filter(c => c._id !== card._id));
+    api.deleteCard(card._id).then(() => {
+      setCards(cards.filter((c) => c._id !== card._id));
     });
   }
-  function handleUpdateUser({name, about}) {
-    api.setUserInfoApi(name, about)
-    .then((res) => {
+  function handleUpdateUser({ name, about }) {
+    api.setUserInfoApi(name, about).then((res) => {
       setСurrentUser(res);
       closeAllPopups();
-    })
+    });
   }
-  function handleUpdateAvatar({avatar}) {
-    api.changeAvatar(avatar)
-    .then((res) => {
+  function handleUpdateAvatar({ avatar }) {
+    api.changeAvatar(avatar).then((res) => {
       setСurrentUser(avatar);
       closeAllPopups();
-    })
+    });
   }
-  function handleAddPlaceSubmit({name,link}) {
-    api.getNewCard(name,link)
-    .then((res) => {
-      setCards([res,...cards]);
+  function handleAddPlaceSubmit({ name, link }) {
+    api.getNewCard(name, link).then((res) => {
+      setCards([res, ...cards]);
       closeAllPopups();
-    })
+    });
   }
   useEffect(() => {
     Promise.all([api.getInitialCards(), api.getUserInfo()])
-    .then(([cards, user]) => {
-      setCards(cards);
-      setСurrentUser(user);
-    })
-    .catch(() => {
-        console.log('error');
-    })
-  }, [])
+      .then(([cards, user]) => {
+        setCards(cards);
+        setСurrentUser(user);
+      })
+      .catch(() => {
+        console.log("error");
+      });
+  }, []);
   return (
     <CurrentUserContex.Provider value={currentUser}>
       <Header />
@@ -105,25 +103,27 @@ function App() {
         onCardDelete={handleCardDelete}
         cards={cards}
       />
-      <EditProfilePopup 
-      isOpen={isEditProfilePopupOpen} 
-      onClose={closeAllPopups} 
-      onUpdateUser={handleUpdateUser}/>
-      <EditAvatarPopup 
-      isOpen={isEditAvatarPopupOpen} 
-      onClose={closeAllPopups} 
-      onUpdateAvatar={handleUpdateAvatar}/>
+      <EditProfilePopup
+        isOpen={isEditProfilePopupOpen}
+        onClose={closeAllPopups}
+        onUpdateUser={handleUpdateUser}
+      />
+      <EditAvatarPopup
+        isOpen={isEditAvatarPopupOpen}
+        onClose={closeAllPopups}
+        onUpdateAvatar={handleUpdateAvatar}
+      />
       <AddPlacePopup
-      isOpen={isAddPlacePopupOpen}
-      onClose={closeAllPopups}
-      onAddPlace={handleAddPlaceSubmit}
+        isOpen={isAddPlacePopupOpen}
+        onClose={closeAllPopups}
+        onAddPlace={handleAddPlaceSubmit}
       />
       <PopupWithForm
         name="confirm"
         title="Вы уверены?"
         button="Да"
       ></PopupWithForm>
-      
+
       <ImagePopup card={selectedCard} onClose={closeAllPopups} />
 
       <Footer />
