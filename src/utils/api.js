@@ -48,6 +48,21 @@ class Api {
       headers: this.headers,
     }).then((res) => this._checkStatus(res));
   }
+  // _getCardId(id) {
+  //   return fetch(`${this.baseUrl}/cards/${id}`, {
+  //     method: "GET",
+  //     headers: this.headers,
+  //   }).then((res) => this._checkStatus(res));
+  //   }
+  // changeLikeCardStatus(id, isLiked) {
+  //   if (isLiked === true) {
+  //     this._addLike(id);
+  //   }
+  //   else {
+  //     this._removeLike(id);
+  //   }
+  //   this._getCardId(id);
+  // }
   deleteCard(id) {
     return fetch(`${this.baseUrl}/cards/${id}`, {
       method: "DELETE",

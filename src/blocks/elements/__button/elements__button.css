@@ -1,4 +1,4 @@
-.elements__button {
+.card__like-button {
   background-image: url(../../../images/heart.svg);
   width: 22px;
   height: 19px;
@@ -8,7 +8,7 @@
 }
 
 @media (min-width: 910px) {
-  .elements__button:hover {
+  .card__like-button:hover {
     opacity: 0.5;
     transition: 0.5s;
   }
