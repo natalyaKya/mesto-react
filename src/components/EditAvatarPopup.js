@@ -30,7 +30,7 @@ function EditAvatarPopup(props) {
         name="avatar"
         required
         placeholder="Ссылка на картинку"
-        ref={avatarRef}
+        ref={avatarRef  || ''}
       />
       <span className="link-avatar-error popup__text-error"></span>
     </PopupWithForm>

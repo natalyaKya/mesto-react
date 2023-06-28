@@ -45,7 +45,7 @@ function AddPlacePopup(props) {
         name="link"
         required
         placeholder="Ссылка на картинку"
-        ref={cardLinkRef}
+        ref={cardLinkRef || ''}
       />
       <span className="link-card-error popup__text-error"></span>
     </PopupWithForm>
