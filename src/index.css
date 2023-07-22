@@ -46,3 +46,14 @@
 @import url(../src/blocks/popup/__button/_disabled/popup__button_disabled.css);
 
 @import url(../src/blocks/profile/__avatar-conteiner/profile__avatar-conteiner.css);
+
+@import url(../src/blocks/entry/entry__content.css);
+@import url(../src/blocks/entry/__form/_input/entry__form_input.css);
+@import url(../src/blocks/entry/__heading/entry__heading.css);
+@import url(../src/blocks/entry/__button/entry__button.css);
+@import url(../src/blocks/header/__navigation/_link/header__navigation_link.css);
+@import url(../src/blocks/register/__link/register__link.css);
+
+@import url(../src/blocks/popup/__conteiner/_tooltip/popup__container_tooltip.css);
+@import url(../src/blocks/popup/__heading/_tolltip/popup__heading_tolltip.css);
+@import url(../src/blocks/popup/__image/_tooltip/popup__image_tooltip.css);

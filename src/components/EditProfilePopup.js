@@ -52,7 +52,7 @@ function EditProfilePopup(props) {
       <input
         id="job-profile"
         className="popup__text popup__text_type_job"
-        type="telxt"
+        type="text"
         name="job"
         required
         placeholder="Профессия"

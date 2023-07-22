@@ -1,5 +1,7 @@
 import React from "react";
 import Card from "./Card";
+import Header from "./Header";
+import Footer from "./Footer";
 import { CurrentUserContex } from "../contexts/CurrentUserContext";
 
 export const PopupEditProfile = document.querySelector(
@@ -8,8 +10,13 @@ export const PopupEditProfile = document.querySelector(
 
 function Main(props) {
   const currentUser = React.useContext(CurrentUserContex);
-
   return (
+    <>
+    <Header
+    userEmail={props.userEmail}
+    link={"/sign-in"}
+    navigation={"Выйти"}
+    />
     <main className="content">
       <section className="profile">
         <div className="profile__avatar-conteiner" onClick={props.onEditAvatar}>
@@ -48,7 +55,9 @@ function Main(props) {
           />
         ))}
       </section>
+      <Footer />
     </main>
+    </>
   );
 }
 
