@@ -7,7 +7,7 @@ function InfoTooltip(props) {
     <div
       className={`popup popup_type_infoTooltip ${
         props.isOpen ? "popup_opened" : ""
-      }`}
+      }`} 
     >
       <div className="popup__container popup__container_tooltip">
         <button
